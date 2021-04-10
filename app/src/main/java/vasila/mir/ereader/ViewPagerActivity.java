@@ -2,7 +2,6 @@ package vasila.mir.ereader;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +14,7 @@ import java.util.List;
 import vasila.mir.ereader.data.db.Page;
 
 public class ViewPagerActivity extends AppCompatActivity {
-    ViewPager2 vpContent, pageNumber;
-    //List<Integer> textViews;
+    ViewPager2 vpContent;
     ViewAdapter adapter;
 
     private Repository repository;
@@ -57,7 +55,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            pages = repository.getListOfpages(
+            pages = repository.getListOfPages(
                     getIntent().getIntExtra("bookId", 0)
             );
             return null;
@@ -71,22 +69,3 @@ public class ViewPagerActivity extends AppCompatActivity {
     }
 
 }
-
-
-/**
- * pageNumber.setAdapter(pageNumAdapter);
- * pageNumber.setClipToPadding(false);
- * pageNumber.setClipChildren(false);
- * pageNumber.setOffscreenPageLimit(3);
- * pageNumber.getChildAt(0).setOverScrollMode(View.OVER_SCROLL_NEVER);
- * <p>
- * CompositePageTransformer transformer1 = new CompositePageTransformer();
- * transformer1.addTransformer(new MarginPageTransformer(8));
- * transformer1.addTransformer((page, position) -> {
- * float v = 1 - Math.abs(position);
- * <p>
- * page.setScaleY(0.8f + v * 0.2f);
- * });
- * <p>
- * pageNumber.setPageTransformer(transformer1);
- **/

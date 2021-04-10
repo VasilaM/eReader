@@ -16,19 +16,22 @@
             android:id="@+id/pageContents"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black" />
+            android:textColor="@color/toolbar"
+            android:fontFamily="sans-serif-light"
+            />
 
     </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/page_number"
+        android:textColor="@color/toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:layout_weight="10"
-        android:textSize="18sp"
-        tools:text="2" />
+        android:textSize="18sp" />
 
 </LinearLayout>
 

@@ -9,7 +9,7 @@
         android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="7.5dp"
         tools:src="@drawable/kite_runner"
         android:adjustViewBounds="true" />
 
@@ -17,10 +17,11 @@
         android:id="@+id/book_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         tools:text="Халед Хоссейни"
         android:textSize="22sp"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/black"
-        android:fontFamily="sans-serif-black"/>
+        android:textColor="@color/toolbar"
+        android:fontFamily="sans-serif-smallcaps"/>
 
 </LinearLayout>

@@ -1,6 +1,5 @@
 package vasila.mir.ereader;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,3 +75,4 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         public void onItemClick(Book book);
     }
 }
+

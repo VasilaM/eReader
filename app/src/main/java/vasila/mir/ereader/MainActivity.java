@@ -5,8 +5,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vasila.mir.ereader.data.db.Book;
-import vasila.mir.ereader.data.db.BooksDbHelper;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView dataList;

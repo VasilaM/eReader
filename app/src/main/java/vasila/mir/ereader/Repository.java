@@ -18,7 +18,7 @@ public class Repository {
         return dao.getListOfBooks();
     }
 
-    public List<Page> getListOfpages(int bookId) {
+    public List<Page> getListOfPages(int bookId) {
         return dao.getListOfPages(bookId);
     }
 }

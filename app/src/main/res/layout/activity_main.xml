@@ -7,7 +7,7 @@
         android:id="@+id/base_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black">
+        android:background="@color/toolbar">
 
         <TextView
             android:id="@+id/app_name"
@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
             android:textSize="30sp" />
 
 
