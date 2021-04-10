@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/page1"
+        android:layout_weight="1"
+        android:textSize="13.8sp"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-thin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pageNum1"
+        android:fontFamily="sans-serif-thin"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>
