@@ -15,7 +15,7 @@ public class BookApp extends Application {
         super.onCreate();
         bookApp = this;
         booksDatabase = Room.databaseBuilder(this, booksDatabase.class, "books.db")
-                .createFromAsset("database/books.db")
+                .createFromAsset("databases/books.db")
                 .build();
     }
 
@@ -26,6 +26,4 @@ public class BookApp extends Application {
     public booksDatabase getBooksDatabase(){
         return booksDatabase;
     }
-
-
 }
