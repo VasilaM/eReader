@@ -21,33 +21,30 @@ public class MainActivity extends AppCompatActivity {
     MainAdapter adapter;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         BooksDbHelper helper = new BooksDbHelper(this);
         SQLiteDatabase myDatabase = helper.getReadableDatabase();
 
-        Cursor cursor =  myDatabase
-                .rawQuery("SELECT * FROM pages", new String[]{});
-cursor.moveToFirst();
 
-        Log.d("NAAAAAAME", cursor.getString(cursor.getColumnIndex("pageContents")));
+        Cursor cursor = myDatabase
+                    .rawQuery("SELECT * FROM pages WHERE pageID = 2", new String[]{});
+        cursor.moveToFirst();
+
+        Log.d("NAAAAAAME",cursor.getString(cursor.getColumnIndex("pageContents")));
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dataList = findViewById(R.id.data_list);
 
-
         images = new ArrayList<>();
 
         images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
-        images.add(R.drawable.kite_runner);
+        images.add(R.drawable.cinder);
+        images.add(R.drawable.flowers_for_algernon);
+
         adapter = new MainAdapter(this,images);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);

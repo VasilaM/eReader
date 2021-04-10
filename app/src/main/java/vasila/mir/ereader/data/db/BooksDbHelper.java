@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+import androidx.room.Room;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,6 +34,7 @@ public class BooksDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
 
     }
 
@@ -95,4 +97,6 @@ public class BooksDbHelper extends SQLiteOpenHelper {
         installOrUpdateIfNecessary();
         return super.getReadableDatabase();
     }
+
+
 }

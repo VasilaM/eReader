@@ -7,19 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/vp_vertical"
-        android:orientation="vertical"/>
+        android:id="@+id/view_pager"
+        android:orientation="horizontal"
+        >
+
+    </androidx.viewpager2.widget.ViewPager2>
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/vp_horizontal"
-        android:orientation="horizontal"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/page_num_viewer"
+        android:orientation="horizontal">
+    </androidx.viewpager2.widget.ViewPager2>
+
 
 </LinearLayout>

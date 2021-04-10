@@ -1,21 +1,26 @@
 package vasila.mir.ereader;
 
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import vasila.mir.ereader.data.db.BooksDbHelper;
+
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     List<Integer> images;
     LayoutInflater inflater;
-
+    Context context;
     public MainAdapter(Context ctx, List<Integer> images){
         this.images = images;
         this.inflater = LayoutInflater.from(ctx);
@@ -44,10 +49,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            context = itemView.getContext();
             gridIcon = itemView.findViewById(R.id.image_view);
 
-            itemView.setOnClickListener(v -> {
-                Log.d("eeeeee",  "I am clicked");
+            itemView.setOnClickListener(v ->{
+                    Intent intent = new Intent(context, ViewPager.class);
+                    context.startActivity(intent);
             });
         }
     }
