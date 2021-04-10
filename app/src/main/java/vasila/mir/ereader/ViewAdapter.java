@@ -18,6 +18,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
     public void setPages(List<Page> listOfPages) {
         this.pageList = listOfPages;
+        notifyDataSetChanged();
     }
 
     @NonNull
