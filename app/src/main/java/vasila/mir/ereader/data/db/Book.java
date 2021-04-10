@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
-public class books {
+@Entity(tableName = "books")
+public class Book {
     @PrimaryKey
     @NonNull
     public int bookID;

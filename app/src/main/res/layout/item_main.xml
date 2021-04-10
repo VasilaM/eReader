@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/pageContents"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/black"
-    >
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:weightSum="100">
 
-</TextView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="90">
+
+        <TextView
+            android:id="@+id/pageContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/page_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="10"
+        android:textSize="18sp"
+        tools:text="2" />
+
+</LinearLayout>
+
 

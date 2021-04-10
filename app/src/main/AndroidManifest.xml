@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
+        android:name=".BookApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EReader">
@@ -17,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ViewPager">
+        <activity android:name=".ViewPagerActivity">
 
         </activity>
     </application>
