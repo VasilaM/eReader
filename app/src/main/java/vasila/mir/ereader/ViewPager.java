@@ -45,11 +45,16 @@ public class ViewPager extends AppCompatActivity {
 
 
         textViews = new ArrayList<>();
-        textViews.add(R.id.text_view);
-        textViews.add(R.id.text_view);
-        textViews.add(R.id.text_view);
-        textViews.add(R.id.text_view);
-        textViews.add(R.id.text_view);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
+        textViews.add(R.id.pageContents);
 
         /**pageNums  = new ArrayList<>();
         pageNums.add(R.id.pageNum);

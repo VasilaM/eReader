@@ -46,7 +46,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textView = itemView.findViewById(R.id.text_view);
+            textView = itemView.findViewById(R.id.pageContents);
         }
     }
 
