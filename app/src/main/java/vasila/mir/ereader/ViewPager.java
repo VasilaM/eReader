@@ -1,6 +1,5 @@
 package vasila.mir.ereader;
 
-import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -35,17 +34,11 @@ public class ViewPager extends AppCompatActivity {
         vpContent = findViewById(R.id.view_pager);
     //    pageNumber = findViewById(R.id.page_num_viewer);
 
-        BooksDbHelper helper = new BooksDbHelper(this);
-        SQLiteDatabase myDatabase = helper.getReadableDatabase();
 
-
-        Cursor cursor = myDatabase
-                .rawQuery("SELECT * FROM pages WHERE pageID = 1", new String[]{});
-        cursor.moveToFirst();
 
 
         textViews = new ArrayList<>();
-        textViews.add(R.id.pageContents);
+        textViews.add(R.id.page1);
         textViews.add(R.id.pageContents);
         textViews.add(R.id.pageContents);
         textViews.add(R.id.pageContents);

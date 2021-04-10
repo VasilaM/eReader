@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView dataList;
     List<Integer> images;
     MainAdapter adapter;
+    TextView page1;
 
 
 
@@ -26,15 +28,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         BooksDbHelper helper = new BooksDbHelper(this);
         SQLiteDatabase myDatabase = helper.getReadableDatabase();
-
+        page1 = findViewById(R.id.page1);
 
         Cursor cursor = myDatabase
-                    .rawQuery("SELECT * FROM pages WHERE pageID = 2", new String[]{});
+                    .rawQuery("SELECT * FROM pages WHERE pageID = 1", new String[]{});
         cursor.moveToFirst();
 
         Log.d("NAAAAAAME",cursor.getString(cursor.getColumnIndex("pageContents")));
 
-
+        page1.setText(cursor.getString(cursor.getColumnIndex("pageContents")));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dataList = findViewById(R.id.data_list);
